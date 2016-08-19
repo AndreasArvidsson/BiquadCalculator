@@ -54,7 +54,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><label for="low-order">Slope</label></td>
+                                <td><label for="low-order">Slope (dB/oct)</label></td>
                                 <td>
                                     <select ng-model="order" ng-disabled="type === '0'" id="low-order" class="form-control">
                                         <option ng-repeat="order in types[type].orders" value="{{$index}}">{{order.slope}}</option>
