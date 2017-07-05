@@ -118,16 +118,16 @@ var Biquad = {};
         return coefficients;
     }
 
-    function calcAmplitude(freq, fs, a0, a1, a2, b0, b1, b2) {
-
-        var w = 2.0 * Math.PI * freq / fs;
-
-        var numerator = b0 * b0 + b1 * b1 + b2 * b2 + 2 * b1 * (b0 + b2) * Math.cos(w) + 2 * b0 * b2 * Math.cos(2 * w);
-        var denominator = a0 * a0 + a1 * a1 + a2 * a2 + 2 * a1 * (a0 + a2) * Math.cos(w) + 2 * a0 * a2 * Math.cos(2 * w);
-//        console.log(numerator, denominator, numerator / denominator);
-        var amplitude = Math.sqrt(numerator / denominator);
-        console.log(freq, amplitude, 20 * Math.log10(amplitude));
-    }
+//    function calcAmplitude(freq, fs, a0, a1, a2, b0, b1, b2) {
+//
+//        var w = 2.0 * Math.PI * freq / fs;
+//
+//        var numerator = b0 * b0 + b1 * b1 + b2 * b2 + 2 * b1 * (b0 + b2) * Math.cos(w) + 2 * b0 * b2 * Math.cos(2 * w);
+//        var denominator = a0 * a0 + a1 * a1 + a2 * a2 + 2 * a1 * (a0 + a2) * Math.cos(w) + 2 * a0 * a2 * Math.cos(2 * w);
+////        console.log(numerator, denominator, numerator / denominator);
+//        var amplitude = Math.sqrt(numerator / denominator);
+//        console.log(freq, amplitude, 20 * Math.log10(amplitude));
+//    }
 
     Biquad.getFrequencies = function (x, biquads, fs, isMiniDSP) {
 //        //BW1

@@ -32,10 +32,10 @@
                             <td><label for="sampleRate">Sample rate(Hz)</label></td>
                             <td><input ng-model="fs" id="sampleRate" type="number" class="form-control"></td>
                         </tr>
-                        <!--                        <tr>
-                                                    <td><label for="isMiniDSP">is miniDSP?</label></td>
-                                                    <td><input ng-model="miniDSP" id="isMiniDSP" type="checkbox"></td>
-                                                </tr>-->
+                        <tr title="a1 & a2 are multiplied with -1 for miniDSP">
+                            <td><label for="isMiniDSP">is miniDSP?</label></td>
+                            <td><input ng-model="miniDSP" id="isMiniDSP" type="checkbox"></td>
+                        </tr>
                     </table>
 
                     <div ng-repeat="c in children" ng-controller="child">
@@ -82,8 +82,8 @@
 
                 </td>
                 <td>
-                    <!--<button ng-click="graphView = !graphView">Show graph</button>-->
-                    <!--<br>-->
+                    <button ng-click="copyToClipboard()">Copy to clipboard</button>
+                    <br>
                     <div ng-hide="graphView" id="biquadResult" ng-bind-html="result"></div>
                     <div ng-show="graphView" id="graphCell"></div>
                 </td>
