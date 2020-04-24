@@ -1,5 +1,5 @@
 
-function Filter(name, orders, editable) {
+function Filter(name, orders) {
     this.name = name;
     this.orders = orders;
 }

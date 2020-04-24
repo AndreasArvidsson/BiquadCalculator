@@ -68,14 +68,9 @@
             return order ? order.order : 0;
         }
 
-//        function replaceAll(str, search, replacement) {
-//            return str.replace(new RegExp(search, "g"), replacement);
-//        }
-
         $scope.copyToClipboard = function () {
             //Convert from html to text.
-//            var text = replaceAll($scope.result.toString(), "<br>", "\n");
-            var text = $scope.result.toString();
+            var text = $scope.result.toString().replace(/<br>/g, "\n");
 
             //Create temp element
             var copyElement = document.createElement("span");
